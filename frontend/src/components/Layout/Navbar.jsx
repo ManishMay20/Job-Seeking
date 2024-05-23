@@ -11,9 +11,11 @@ const Navbar = () => {
   const navigateTo = useNavigate();
 
   const handleLogout = async () => {
+    console.log("i am in logout function");
+    console.log(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/logout`);
     try {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/user/logout",
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/logout`,
         {
           withCredentials: true,
         }

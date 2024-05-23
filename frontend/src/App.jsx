@@ -21,9 +21,10 @@ const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
   useEffect(() => {
     const fetchUser = async () => {
+      console.log(import.meta.env.VITE_BACKEND_URL);
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/user/getuser",
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/getuser`,
           {
             withCredentials: true,
           }
