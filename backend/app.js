@@ -33,7 +33,7 @@ app.use(
 );
 
 app.get("/", (req, res, next) => {
-  res.send("hello");
+  res.send("hello" + process.env.FRONTEND_URL);
 });
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/job", jobRouter);
