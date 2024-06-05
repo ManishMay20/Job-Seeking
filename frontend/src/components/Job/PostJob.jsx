@@ -31,7 +31,7 @@ const PostJob = () => {
     }
     await axios
       .post(
-        `${porcess.env.BACKEND_URL}/api/v1/job/post`,
+        `${process.env.BACKEND_URL}/api/v1/job/post`,
         fixedSalary.length >= 4
           ? {
               title,
